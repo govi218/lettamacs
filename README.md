@@ -10,11 +10,15 @@ Letta Code in Emacs via vterm.
 
 ## Install
 
+With straight.el:
+
 ```elisp
-(add-to-list 'load-path "~/dev/lettamacs")
-(require 'lettamacs)
-(global-set-key (kbd "C-c a") #'lettamacs-run)
+(use-package lettamacs
+  :straight (lettamacs :type git :host github :repo "govi218/lettamacs")
+  :bind ("C-c a" . lettamacs-run))
 ```
+
+Or clone and add to load-path manually.
 
 ## Usage
 
